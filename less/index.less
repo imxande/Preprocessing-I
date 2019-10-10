@@ -54,6 +54,149 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
+
+html{
+	font-size: 62.5%;
+}
+
+h1{
+	text-align: center;
+	margin: 20px 0;
+	font-size: @my-font;
+	color: @link-color;
+}// end of h1
+
+p{
+	padding: 4%;
+	text-align: justify;
+}// end of p
+
+h2{
+	font-weight: bold;
+}
+
+ul{
+	padding:2%;
+}
+
+body{
+	background-color: lightsalmon;
+}
+
+// Variables
+@cool-color: antiquewhite;
+@link-color: dimgray;
+@my-font: 3rem;
+@mobile_font: 160%;
+
+// mixin number one
+.bordered{
+	border:1px solid black;
+}
+
+//mixin number two
+.divided{
+	border-top: 2px dotted black;
+	border-bottom: 2px dotted black;
+}
+// mixin number three
+.nice_boder{
+	border-radius: 10%;
+}
+
+.container{
+	margin: 0 auto;
+	.menu{
+		margin:20px 0px 20px 0px;
+		a{ 
+			text-decoration: none;
+			padding: 2%;
+			color: @link-color;
+			@media(max-width: 500px){
+				font-size: @mobile_font;
+			}// end of media for mobile
+		}// end of links
+	}// end of menu
+	.header{
+		display:flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-between;
+		padding: 2%;
+		text-align: center;
+		.divided();
+		.image1 img {
+			width:50%;
+			height: 250px;
+			.nice_boder();
+			@media(max-width: 500px){
+					display: none;
+				}// end of media query
+		}// end of image
+		.name{
+			.bordered();
+			.nice_boder();
+			background-color: @cool-color;
+			width:70%;
+			@media(max-width: 500px){
+				border: 3px solid black;
+				margin: 0 auto;
+				font-size: @mobile_font;
+			}// end of media query
+		}// end of name
+	}// end of header
+	.top{
+		.bordered();
+		display:flex;
+		flex-direction:row;
+		justify-content: center;
+		justify-content: space-between;
+		max-width:85%;
+		margin:0 auto;
+		background-color: @cool-color;
+		@media(max-width: 500px){
+			flex-direction: column;
+			text-align: center;
+			font-size: @mobile_font;
+		}// end of media query
+	}// end of top
+	.middle{
+		display:flex;
+		flex-direction: row;
+		justify-content: center;
+		justify-content: space-evenly;
+		.middle-content p{
+			.bordered();
+			width:100%;
+			background-color: @cool-color;
+		}// end of middle-content
+		@media(max-width: 500px){
+			flex-direction: column;
+			text-align: center;
+			font-size: @mobile_font;
+		}// end of media query
+	}// end of middle
+	.skills{
+		padding:2%;
+		@media(max-width: 500px){
+			font-size: @mobile_font;
+		}// end of media query
+	}// end of skills
+	.contact{
+		.divided();
+		text-align: center;
+		padding:2%;
+		@media(max-width: 500px){
+			font-size: @mobile_font;
+		}// end of media query
+	}// end of contact
+}// end of container
+
+
+
+
+
+
 
