@@ -177,6 +177,11 @@ body {
   padding: 2%;
   color: dimgray;
 }
+@media (max-width: 500px) {
+  .container .menu a {
+    font-size: 160%;
+  }
+}
 .container .header {
   display: flex;
   flex-direction: row;
@@ -192,11 +197,23 @@ body {
   height: 250px;
   border-radius: 10%;
 }
+@media (max-width: 500px) {
+  .container .header .image1 img {
+    display: none;
+  }
+}
 .container .header .name {
   border: 1px solid black;
   border-radius: 10%;
   background-color: antiquewhite;
   width: 70%;
+}
+@media (max-width: 500px) {
+  .container .header .name {
+    border: 3px solid black;
+    margin: 0 auto;
+    font-size: 160%;
+  }
 }
 .container .top {
   border: 1px solid black;
@@ -207,6 +224,13 @@ body {
   max-width: 85%;
   margin: 0 auto;
   background-color: antiquewhite;
+}
+@media (max-width: 500px) {
+  .container .top {
+    flex-direction: column;
+    text-align: center;
+    font-size: 160%;
+  }
 }
 .container .middle {
   display: flex;
@@ -219,9 +243,29 @@ body {
   width: 100%;
   background-color: antiquewhite;
 }
+@media (max-width: 500px) {
+  .container .middle {
+    flex-direction: column;
+    text-align: center;
+    font-size: 160%;
+  }
+}
+.container .skills {
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .container .skills {
+    font-size: 160%;
+  }
+}
 .container .contact {
   border-top: 2px dotted black;
   border-bottom: 2px dotted black;
   text-align: center;
   padding: 2%;
+}
+@media (max-width: 500px) {
+  .container .contact {
+    font-size: 160%;
+  }
 }
